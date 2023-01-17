@@ -1,14 +1,22 @@
 section.testimonials {
-    padding: 4rem 0 2rem 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    padding: 4rem 0 8rem;
     text-align: center;
 }
 
+.testimonials h3{
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.testimonials .cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
 .testimonials .testimonial-info {
+    background-color: #fff;
     padding: 1rem;
-    border: 1px solid black;
 }
 
 .testimonials .testimonial-info .rating{

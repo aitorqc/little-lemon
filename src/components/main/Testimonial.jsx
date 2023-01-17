@@ -3,7 +3,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 
 import "./Testimonial.css"
 
-export default function Testimonial() {
+export default function Testimonial({title}) {
     const [testimonials, setTestimonials] = useState([
         {
             name: "John Smith",
@@ -33,21 +33,24 @@ export default function Testimonial() {
 
     return (
         <section className="testimonials">
-            {testimonials.map((testimonial, index) => (
-                <div key={index} className="testimonial-info">
-                    <div className="rating">
-                        {
-                            Array(testimonial.rating).fill().map((_, i) => <AiFillStar key={i} />)
-                        }
-                        {
-                            Array(5 - testimonial.rating).fill().map((_, i) => <AiOutlineStar key={i} />)
-                        }
+            <h3>{title}</h3>
+            <div className="cards">
+                {testimonials.map((testimonial, index) => (
+                    <div key={index} className="testimonial-info">
+                        <div className="rating">
+                            {
+                                Array(testimonial.rating).fill().map((_, i) => <AiFillStar key={i} />)
+                            }
+                            {
+                                Array(5 - testimonial.rating).fill().map((_, i) => <AiOutlineStar key={i} />)
+                            }
+                        </div>
+                        <img src={testimonial.image} alt={testimonial.name} />
+                        <h4>{testimonial.name}</h4>
+                        <p>{testimonial.testimonial}</p>
                     </div>
-                    <img src={testimonial.image} alt={testimonial.name} />
-                    <h4>{testimonial.name}</h4>
-                    <p>{testimonial.testimonial}</p>
-                </div>
-            ))}
+                ))}
+            </div>
         </section>
     )
 }

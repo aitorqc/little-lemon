@@ -1,0 +1,36 @@
+section.about{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0 4rem;
+}
+
+.about .about-info{
+    width: 50%;
+}
+
+.about .about-info h1{
+    margin-bottom: .5rem;
+}
+
+.about .about-info h3{
+    margin-bottom: 5rem;
+}
+
+.about .about-info p{
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 80%;
+}
+
+.about img{
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.about img:nth-child(3){
+    position: absolute;
+    right: 150px;
+    bottom: -100px;
+}

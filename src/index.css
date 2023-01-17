@@ -38,12 +38,16 @@ p{
 }
 
 .container{
-  width: 1000px;
-  margin: auto;
+  width: 100%;
+}
+
+.container .background{
+  background-color: #495E57;
 }
 
 header{
-  width: 100%;
+  width: 1000px;
+  margin: auto;
   padding: 2rem;
 }
 
@@ -87,7 +91,9 @@ header nav a:hover::before {
 }
 
 section{
-  margin-bottom: 3rem;
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 4rem;
 }
 
 section button{
