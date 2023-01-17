@@ -37,27 +37,73 @@ p{
   font-size: 1rem;
 }
 
+.container{
+  width: 1000px;
+  margin: auto;
+}
+
 header{
-  width: 800px;
-  margin: 2rem auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+header .container{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header nav ul{
-  display: flex;
+header nav a{
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495E57;
   text-decoration: none;
-  list-style-type: none;
-}
-
-header nav ul li{
   cursor: pointer;
   margin-right: 1.4rem;
+  transition: all .2s ease-in-out;
 }
 
-main.container{
-  width: 800px;
-  margin: auto;
+header nav a:hover {
+  color: #F4CE14;
 }
 
+header nav a::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #F4CE14;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+
+header nav a:hover::before {
+  opacity: 1;
+}
+
+section{
+  margin-bottom: 3rem;
+}
+
+section button{
+  font-weight: 600;
+  color: #fff;
+  width: 160px;
+  padding: 1rem;
+  border-radius: .25rem;
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+section button:hover{
+  color: #000;
+  background-color: #fff;
+  outline: 1px solid #000;
+}

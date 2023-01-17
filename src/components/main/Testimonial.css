@@ -1,0 +1,21 @@
+section.testimonials {
+    padding: 4rem 0 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+.testimonials .testimonial-info {
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.testimonials .testimonial-info p{
+    margin-bottom: 1rem;
+}
+
+.testimonials .testimonial-info img{
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
