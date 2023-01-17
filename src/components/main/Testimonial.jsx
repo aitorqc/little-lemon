@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {AiFillStar, AiOutlineStar} from "react-icons/ai"
+import { AiFillStar, AiOutlineStar } from "react-icons/ai"
 
 import "./Testimonial.css"
 
@@ -30,11 +30,19 @@ export default function Testimonial() {
             testimonial: "The food was good, but the service was a bit slow."
         }
     ]);
+
     return (
         <section className="testimonials">
             {testimonials.map((testimonial, index) => (
                 <div key={index} className="testimonial-info">
-                    <div>{testimonial.rating}</div>
+                    <div className="rating">
+                        {
+                            Array(testimonial.rating).fill().map((_, i) => <AiFillStar key={i} />)
+                        }
+                        {
+                            Array(5 - testimonial.rating).fill().map((_, i) => <AiOutlineStar key={i} />)
+                        }
+                    </div>
                     <img src={testimonial.image} alt={testimonial.name} />
                     <h4>{testimonial.name}</h4>
                     <p>{testimonial.testimonial}</p>
