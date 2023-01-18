@@ -7,18 +7,25 @@ section.highlights {
 .highlights .highlights-info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 3rem;
+}
+
+.highlights .highlights-info h2 {
+    color: #495E57;
 }
 
 .highlights .dishes {
     display: grid;
+    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .highlights .dishes .dish {
     margin: auto;
-    width: 90%;
+    width: 100%;
     height: 100%;
+    background-color: #fff;
     -webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.5);
@@ -27,43 +34,35 @@ section.highlights {
     overflow: hidden;
 }
 
-.highlights .dishes .dish:nth-child(1){
-    margin-left: 0;
-}
-
-.highlights .dishes .dish:nth-child(3){
-    margin-right: 0;
-}
-
 .highlights .dishes .dish img {
     width: 100%;
     height: 40%;
     object-fit: cover;
 }
 
-.highlights .dishes .dish .dish-info{
+.highlights .dishes .dish .dish-info {
     position: relative;
     padding: 1rem 1.5rem;
     height: 60%;
 }
 
-.highlights .dishes .dish .dish-info div{
+.highlights .dishes .dish .dish-info div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
 }
 
-.highlights .dishes .dish .dish-info div p{
+.highlights .dishes .dish .dish-info div p {
     font-weight: 600;
 }
 
-.highlights .dishes .dish .dish-info>p:nth-child(2){
+.highlights .dishes .dish .dish-info>p:nth-child(2) {
     text-align: justify;
     margin-bottom: 2rem;
 }
 
-.highlights .dishes .dish .dish-info>p:nth-child(3){
+.highlights .dishes .dish .dish-info>p:nth-child(3) {
     position: absolute;
     display: flex;
     justify-content: left;
@@ -75,11 +74,65 @@ section.highlights {
     transition: all .5s ease-in-out;
 }
 
-.highlights .dishes .dish .dish-info>p:nth-child(3):hover{
+.highlights .dishes .dish .dish-info>p:nth-child(3):hover {
     transform: translateX(10px);
 }
 
-.dish-info>p:nth-child(3) svg{
+.dish-info>p:nth-child(3) svg {
     margin-left: .5rem;
 }
 
+/* Queries */
+@media (max-width: 1100px) {
+    .highlights .dishes .dish .dish-info {
+        padding: .6rem 1rem;
+    }
+
+    .highlights .dishes .dish .dish-info div {
+        margin-bottom: 1.5rem;
+    }
+
+    .highlights .dishes .dish .dish-info h3 {
+        font-size: 1rem;
+    }
+
+    .highlights .dishes .dish .dish-info p {
+        font-size: .8rem !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .highlights .highlights-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .highlights .dishes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .highlights .highlights-info {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .highlights .dishes {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .highlights .dishes .dish {
+        margin: auto;
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .highlights .dishes .dish {
+        margin: auto;
+        width: 90%;
+    }
+}

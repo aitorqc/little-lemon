@@ -21,16 +21,16 @@ export default function Main() {
       <Highlights
         title="Specials" />
       <div className='background'>
-        <Testimonial 
-        title="Testimonials"/>
+        <Testimonial
+          title="Testimonials" />
       </div>
       <About
         title="Little Lemon"
         subtitle="Chicago"
         about="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
       Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
-      img1="Mario and Adrian A.jpg"
-      img2="restaurant chef B.jpg"/>
+        img1="Mario and Adrian A.jpg"
+        img2="restaurant chef B.jpg" />
     </main>
   )
 }

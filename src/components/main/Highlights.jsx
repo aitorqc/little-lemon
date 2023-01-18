@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { RiEBike2Line } from "react-icons/ri"
 
-import dish1 from "../../icons_assets/bruchetta.svg";
-import dish2 from "../../icons_assets/lemon dessert.jpg";
-import dish3 from "../../icons_assets/greek salad.jpg";
-
 import "./Highlights.css";
 
 export default function Highlights({ title }) {
