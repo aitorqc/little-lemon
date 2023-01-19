@@ -8,6 +8,7 @@ import {
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Menu from "./pages/Menu";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
+          <Route path="/menu" element={<Menu/>}/>
           <Route path='*' component={<Home />} />
         </Route>
       </Routes>

@@ -1,0 +1,26 @@
+.menu-page .title{
+    text-align: center;
+    padding: 3rem;
+    color: #F4CE14;
+    background-color: #495E57;
+}
+
+.menu-page .dishes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.menu-page>h2{
+    color: #495E57;
+    margin: 5rem 0 2.5rem;
+    padding-bottom: .5rem;
+    border-bottom: 3px solid #495E57;
+    width: 50%;
+}
+
+@media (max-width: 850px) {
+    .menu-page .dishes{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
