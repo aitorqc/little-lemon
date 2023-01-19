@@ -6,6 +6,7 @@
 
 :root {
   font-size: 16px;
+  position: relative;
 }
 
 body {
@@ -40,6 +41,7 @@ p {
 
 .container {
   width: 100%;
+  margin-top: 104px;
 }
 
 .container .background {
@@ -49,14 +51,22 @@ p {
 /* Header */
 
 header {
+  position: fixed;
   width: 100%;
-  max-width: 1000px;
-  margin: auto;
+  height: 104px;
+  top: 0;
+  background-color: #D9D9D9;
+  z-index: 999;
   padding: 2rem 0;
 }
 
+header .nav-container {
+  width: 1000px;
+  margin: auto;
+}
+
 header .responsive {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -82,19 +92,20 @@ header .responsive a {
   text-decoration: none;
   margin: 1rem 0;
   color: #495E57;
+  cursor: pointer;
 }
 
 header .responsive a:hover {
   color: #fff;
 }
 
-header .container nav {
+header .nav-container nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header nav .links a {
+header .nav-container nav .links a {
   position: relative;
   font-size: 1.2rem;
   font-weight: 600;
@@ -151,8 +162,10 @@ section {
   margin-bottom: 4rem;
 }
 
-section button {
-  font-weight: 600;
+section .button {
+  display: block;
+  text-decoration: none;
+  text-align: center;
   color: #000;
   width: 180px;
   padding: 1rem;
@@ -166,7 +179,7 @@ section button {
   transition: all .3s ease-in-out;
 }
 
-section button:hover {
+section .button:hover {
   color: #F4CE14;
   background-color: #fff;
   outline: 1px solid #F4CE14;
@@ -211,13 +224,39 @@ footer.footer {
   color: #F4CE14;
 }
 
+.toTop {
+  cursor: pointer;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 50px;
+  height: 50px;
+  background: #F4CE14;
+  color: #495E57;
+  font-size: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.5);
+
+  transition: all .3s ease-in-out;
+}
+
+.toTop:hover {
+  transform: scale(1.1);
+}
+
 /* Queries */
 @media (max-width: 1100px) {
-  header {
+  header .nav-container {
     width: 70%;
   }
 
-  header nav .links a {
+  header .nav-container nav .links a {
     font-size: 1rem;
     margin-left: .8rem;
   }
@@ -236,7 +275,7 @@ footer.footer {
 }
 
 @media (max-width: 850px) {
-  header {
+  header .nav-container {
     width: 80%;
   }
 
@@ -244,7 +283,7 @@ footer.footer {
     width: 120px;
   }
 
-  header nav .links a {
+  header .nav-container nav .links a {
     font-size: .8rem;
     margin-left: .8rem;
   }
@@ -270,10 +309,11 @@ footer.footer {
     font-size: 1rem;
   }
 
-  section button {
+  section .button {
     width: 140px;
     padding: .8rem;
     font-size: .8rem;
+    float: right;
   }
 }
 

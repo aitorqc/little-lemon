@@ -105,3 +105,31 @@
         bottom: .8rem;
     }
 }
+
+@media (max-width: 420px) {
+    .dish-card{
+        height: 140px;
+    }
+
+    .dish-card .info{
+        width: 60%;
+    }
+
+    .dish-card img{
+        width: 40%;
+    }
+    
+    .dish-card .info h2{
+        font-size: .8rem;
+        margin-bottom: .8rem;
+    }
+    
+    .dish-card .info p{
+        font-size: .8rem;
+    }
+    
+    .dish-card .info p:nth-child(3){
+        right: .8rem;
+        bottom: .8rem;
+    }
+}

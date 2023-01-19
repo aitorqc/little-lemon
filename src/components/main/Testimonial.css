@@ -35,6 +35,11 @@ section.testimonials {
 
 /* Queries */
 @media (max-width: 1100px) {
+    .testimonials .cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
     .testimonials .testimonial-info .rating{
         margin-bottom: .8rem;
         font-size: 1rem;
@@ -48,13 +53,6 @@ section.testimonials {
 
     .testimonials .testimonial-info p{
         font-size: .8rem;
-    }
-}
-
-@media (max-width: 850px) {
-    .testimonials .cards{
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1rem;
     }
 }
 

@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Menu from "./pages/Menu";
+import ToTop from "./components/ToTop";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         </Route>
       </Routes>
       <Footer />
+      <ToTop/>
     </Router>
   );
 }

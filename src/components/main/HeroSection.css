@@ -62,6 +62,10 @@ section.hero {
         margin: 2rem 0;
     }
 
+    .hero .hero-content p{
+        width: 100%;
+    }
+
     .hero .hero-content button{
         float: right;
     }

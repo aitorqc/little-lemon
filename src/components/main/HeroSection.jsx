@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import "./HeroSection.css"
 
@@ -9,7 +10,7 @@ export default function HeroSection({title, subtitle, description, buttonText, i
                 <h1>{title}</h1>
                 <h3>{subtitle}</h3>
                 <p>{description}</p>
-                <button>{buttonText}</button>
+                <Link to="/reservations" className='button'>{buttonText}</Link>
             </div>
             <img src={image} alt="Hero" />
         </section>

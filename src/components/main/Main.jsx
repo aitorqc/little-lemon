@@ -25,6 +25,7 @@ export default function Main() {
           title="Testimonials" />
       </div>
       <About
+        id="about"
         title="Little Lemon"
         subtitle="Chicago"
         about="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.

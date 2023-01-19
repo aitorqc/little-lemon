@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
 import { RiEBike2Line } from "react-icons/ri"
 
 import "./Highlights.css";
 
 export default function Highlights({ title }) {
-    const [specials, setSPecials] = useState([
+    const specials = [
         {
             name: "Brucheta",
             image: "bruchetta.svg",
@@ -23,13 +24,13 @@ export default function Highlights({ title }) {
             price: 12.99,
             description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
         },
-    ]);
+    ];
 
     return (
         <section className='highlights'>
             <div className='highlights-info'>
                 <h2>{title}</h2>
-                <button>Online Menu</button>
+                <Link to="/menu" className='button'>Online Menu</Link>
             </div>
             <div className="dishes">
                 {specials.map((special, index) => (
