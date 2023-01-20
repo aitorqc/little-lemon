@@ -1,0 +1,18 @@
+.hero-booking {
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+  }
+
+  .hero-booking h1{
+    font-size: 3rem;
+    color: #F4CE14;
+  }
+
+  .hero-booking h2{
+    color: #fff;
+  }

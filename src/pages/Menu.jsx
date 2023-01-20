@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import DishCard from "../components/menu/DishCard";
 
@@ -77,6 +77,10 @@ export default function Menu() {
             price: 10
         }
     ];
+
+    useEffect(()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
 
     return (
         <section className="menu-page">
