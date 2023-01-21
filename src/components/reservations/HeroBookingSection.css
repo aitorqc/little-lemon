@@ -1,18 +1,47 @@
 .hero-booking {
-    background-position: center;
-    background-size: cover;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 4rem;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem;
+}
+
+.hero-booking h1 {
+  font-size: 3rem;
+  color: #F4CE14;
+}
+
+.hero-booking h2 {
+  color: #fff;
+}
+
+@media (max-width: 850px) {
+  .hero-booking {
+    height: 50vh;
+    padding: 3rem;
   }
 
-  .hero-booking h1{
-    font-size: 3rem;
-    color: #F4CE14;
+  .hero-booking h1 {
+    font-size: 2.5rem;
   }
 
-  .hero-booking h2{
-    color: #fff;
+  .hero-booking h2 {
+    font-size: 1.2rem;
   }
+}
+
+@media (max-width: 420px) {
+  .hero-booking {
+    height: 40vh;
+  }
+
+  .hero-booking h1 {
+    font-size: 2rem;
+  }
+
+  .hero-booking h2 {
+    font-size: 1rem;
+  }
+}

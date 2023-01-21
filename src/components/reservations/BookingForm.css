@@ -1,4 +1,4 @@
-.form-booking form{
+.form-booking form {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -9,7 +9,7 @@
     border-radius: 1rem;
 }
 
-.form-booking form label{
+.form-booking form label {
     margin-bottom: .7rem;
     margin-left: 1rem;
     text-transform: uppercase;
@@ -18,7 +18,8 @@
     color: #F4CE14;
 }
 
-.form-booking form input, select{
+.form-booking form input,
+select {
     margin-bottom: 1rem;
     border: none;
     height: 2.8rem;
@@ -27,18 +28,18 @@
     font-size: 1rem;
 }
 
-.form-booking form div{
+.form-booking form div {
     margin-bottom: 1rem;
     margin-left: 2rem;
     color: red;
     font-size: 1.2rem;
 }
 
-.form-booking form input.error{
+.form-booking form input.error {
     border: 2px solid red;
 }
 
-.form-booking form textarea{
+.form-booking form textarea {
     margin-bottom: 1.5rem;
     border: none;
     height: 200px;
@@ -46,7 +47,7 @@
     font-size: 1rem;
 }
 
-.form-booking form input[type=submit]{
+.form-booking form input[type=submit] {
     cursor: pointer;
     width: 60%;
     margin: 3rem auto;
@@ -56,8 +57,86 @@
     transition: all .3s ease-in-out;
 }
 
-.form-booking form input[type=submit]:hover{
+.form-booking form input[type=submit]:hover {
     background-color: #495E57;
     color: #F4CE14;
     outline: 1px solid #F4CE14;
+}
+
+@media (max-width: 850px) {
+    .form-booking form {
+        width: 80%;
+        padding: 3rem 3rem .8rem 3rem;
+    }
+
+    .form-booking form label {
+        margin-bottom: .6rem;
+        margin-left: .8rem;
+        font-size: 1rem;
+    }
+
+    .form-booking form input,
+    select {
+        height: 2.4rem;
+        font-size: .8rem;
+    }
+
+    .form-booking form div {
+        margin-left: 1.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .form-booking form {
+        width: 100%;
+        padding: 2.5rem 2.5rem .6rem 2.5rem;
+    }
+
+    .form-booking form label {
+        font-size: .9rem;
+    }
+
+    .form-booking form input,
+    select {
+        height: 2.2rem;
+        font-size: .7rem;
+        padding: .6rem;
+    }
+
+    .form-booking form div {
+        margin-left: 1.6rem;
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .form-booking form {
+        width: 100%;
+        padding: 2rem 2rem .5rem 2rem;
+    }
+
+    .form-booking form input,
+    select {
+        height: 2rem;
+        font-size: .6rem;
+        padding: .5rem;
+    }
+
+    .form-booking form div {
+        margin-left: 1.5rem;
+        font-size: .8rem;
+    }
+
+    .form-booking form textarea {
+        margin-bottom: 1.2rem;
+        height: 180px;
+        padding: 1rem;
+        font-size: .6rem;
+    }
+    
+    .form-booking form input[type=submit] {
+        width: 100%;
+        margin: 2rem auto;
+    }
 }
