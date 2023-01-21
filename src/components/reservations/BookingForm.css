@@ -18,10 +18,10 @@
     color: #F4CE14;
 }
 
-.form-booking form input{
+.form-booking form input, select{
     margin-bottom: 1rem;
     border: none;
-    height: 2.5rem;
+    height: 2.8rem;
     border-radius: 1rem;
     padding: .8rem;
     font-size: 1rem;

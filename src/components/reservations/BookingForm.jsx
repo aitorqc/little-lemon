@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
+import { fetchAPI, submitAPI } from "../../API.js";
+
 import "./BookingForm.css";
 
-export default function BookingForm() {
+export default function BookingForm({setConfirm}) {
+    const [date, setDate] = useState(new Date());
+    
     const [reservation, setReservation] = useState({
         name: "",
         email: "",
@@ -18,7 +22,13 @@ export default function BookingForm() {
         errorMsg: ""
     });
 
-    const handleSubmit = async event => {
+    const [availableTime, setAvailableTime] = useState([]);
+
+    useEffect(() => {
+        setAvailableTime(fetchAPI(date));
+    }, [date])
+
+    const handleSubmit = event => {
         event.preventDefault();
         const { name, email, phone, date, time, partySize } = reservation;
 
@@ -130,13 +140,19 @@ export default function BookingForm() {
             })
         }
 
+        setConfirm(submitAPI(reservation));
     };
 
     const handleChange = (field) => (event) => {
+        console.log(field);
+        if (field === "date") {
+            setDate(new Date(event.target.value))
+        }
         setReservation({
             ...reservation,
             [field]: event.target.value
         });
+
     };
 
     return (
@@ -187,12 +203,13 @@ export default function BookingForm() {
                 <label htmlFor='time'>
                     Time
                 </label>
-                <input type="time"
-                    id='time'
-                    value={reservation.time}
-                    onChange={handleChange("time")}
-                    required
-                    className={`${validation.field === "time" ? "error" : ""}`} />
+                <select onChange={handleChange("time")}>
+                    {availableTime.map((value) => (
+                        <option key={value} value={value}>
+                            {value}
+                        </option>
+                    ))}
+                </select>
                 <div style={{ display: `${validation.field === "time" ? "block" : "none"}` }}>{validation.errorMsg}</div>
                 <label htmlFor='number'>
                     Number of guests
