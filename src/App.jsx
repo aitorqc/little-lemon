@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -19,9 +20,9 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="/menu" element={<Menu/>}/>
-          <Route path="/reservations" element={<Booking/>}/>
-          <Route path='*' component={<Home />} />
+          <Route exact path="/menu" element={<Menu/>}/>
+          <Route exact path="/reservations" element={<Booking/>}/>
+          <Route path='*' element={<Navigate to="/" replace/>} />
         </Route>
       </Routes>
       <Footer />
