@@ -20,13 +20,15 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route exact path="/menu" element={<Menu/>}/>
-          <Route exact path="/reservations" element={<Booking/>}/>
-          <Route path='*' element={<Navigate to="/" replace/>} />
+          <Route exact path="/menu" element={<Menu />} />
+          <Route exact path="/reservations" element={<Booking />} />
+          <Route
+            path='*'
+            element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
       <Footer />
-      <ToTop/>
+      <ToTop />
     </Router>
   );
 }

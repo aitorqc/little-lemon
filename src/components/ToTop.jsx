@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { BiUpArrow } from "react-icons/bi"
 
 export default function ToTop() {
